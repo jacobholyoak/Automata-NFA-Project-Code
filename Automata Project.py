@@ -1,9 +1,9 @@
 
-def insert(Hashtable, key, value):
+def insert(Dictionary, key, value):
     #print('key = ',key)
     #print('value = ',value)
-    Hashtable[key].append(value)
-    #print(Hashtable[key])
+    Dictionary[key].append(value)
+    #print(Dictionary[key])
     #print()
 
 def Read_Input_NFA():
