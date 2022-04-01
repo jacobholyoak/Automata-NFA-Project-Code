@@ -19,25 +19,25 @@ def Read_Input_NFA():
             break
         if (count == 3):
             alphabet = line.replace(" ","").replace("(","").replace("),","").replace("\n","").split(",")
-            print('alphabet = ',alphabet)
+            #print('alphabet = ',alphabet)
         elif (count == 4):
             K = line.replace(" ","").replace("(","").replace("),","").replace("\n","").split(",") 
-            print('K = ',K)
+            #print('K = ',K)
             dictionary = {key: [] for key in K}
         elif (count == 5):
             s = line.replace(" ","").replace(",","").replace("\n","")
-            print('s = ',s)
+            #print('s = ',s)
         elif (count == 6):
             F = line.replace(" ","").replace("(","").replace("),","").replace("\n","").split(",")
-            print('F = ',F)
+            #print('F = ',F)
         elif (count == 7):
             Transitions = line.replace(" ","").replace("(","").replace(")","").replace("\n","").split(",")
-            print('Transitions = ',Transitions)
+            #print('Transitions = ',Transitions)
             for i in range(int(len(Transitions)/3)):
                 insert(dictionary, Transitions[3*i], [Transitions[3*i + 1],Transitions[3*i + 2]])
         elif (count == 9):
             B = line.replace(" ","") .replace("(","").replace(")","").replace("\n","").split(",")
-            print('B = ', B)
+            #print('B = ', B)
     file1.close()
 
     if (len(B) == 1 and B[0] == ''):
@@ -61,10 +61,10 @@ def Read_Input_NFA():
             Accepted = False
             Accepted = Process_String_NFA(s,B[i],0,dictionary,F,Accepted)
             if (Accepted == True):
-                print(B[i],' is accepted')
+                #print(B[i],' is accepted')
                 Accepted_Tuple[i] = 'Accepted'
             else:
-                print(B[i],' is rejected')
+                #print(B[i],' is rejected')
                 Accepted_Tuple[i] = 'Rejected'
         print(Accepted_Tuple)
         
