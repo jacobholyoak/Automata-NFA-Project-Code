@@ -1,4 +1,3 @@
-
 def insert(Dictionary, key, value):
     #print('key = ',key)
     #print('value = ',value)
@@ -9,7 +8,9 @@ def insert(Dictionary, key, value):
 def Read_Input_NFA():
     #parse/read the file/input line for {{NFA tuple}, input string}
     #if input string is null then ask user for string, print if that string is accepted, and repeat until empty string is given
-    file1 = open('C:\\Users\\Jacob School\\Documents\\Classes\\Theory of Autonama\\proj-1-machine.txt', 'r')
+    file_in = input("Please input the file name: ")
+    file1 = open(file_in, 'r')
+    #file1 = open('C:\\Users\\Jacob School\\Documents\\Classes\\Theory of Autonama\\proj-1-machine.txt', 'r')
     count = 0
     while True:
         count += 1
